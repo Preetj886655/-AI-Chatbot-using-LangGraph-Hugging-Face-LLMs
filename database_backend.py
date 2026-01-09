@@ -9,7 +9,7 @@ from pydantic.v1.fields import FieldInfo as FieldInfoV1
 from langgraph.checkpoint.sqlite import SqliteSaver
 import sqlite3
 # from .autonotebook import tqdm as notebook_tqdm
-os.environ['HUGGINGFACEHUB_API_TOKEN']="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"
+os.environ['HUGGINGFACEHUB_API_TOKEN']="Place_your_huggingFace_API"
 llm=HuggingFaceEndpoint(
     repo_id='deepseek-ai/DeepSeek-V3.2',
     task='text-generation'
@@ -53,4 +53,5 @@ def retrive_all_threads():
 #         break 
 #     config={'configurable':{'thread_id':thread_id}}
 #     res=workflow.invoke({"messages":[HumanMessage(content=prompt)]},config=config)
+
 #     print("the AI Message is -",res['messages'][-1].content)
